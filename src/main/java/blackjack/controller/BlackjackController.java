@@ -19,6 +19,7 @@ public class BlackjackController {
 
     public void run() {
         initCards();
+        needMoreCard();
     }
 
     private void initCards(){
@@ -26,8 +27,18 @@ public class BlackjackController {
         for(Player player : players){
             player.receiveCard(deck.popCard());
             player.receiveCard(deck.popCard());
-            OutputView.retain(player.getCards());
+            OutputView.retain(player);
         }
+    }
 
+    private void needMoreCard(){
+        while(true){
+            if(InputView.needMoreCard(gamer)){
+                gamer.receiveCard(deck.popCard());
+                OutputView.retain(gamer);
+            }else {
+                break;
+            }
+        }
     }
 }

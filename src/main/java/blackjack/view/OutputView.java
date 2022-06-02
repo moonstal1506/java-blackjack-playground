@@ -10,7 +10,7 @@ public class OutputView {
         System.out.println("딜러와 "+gamer.getName()+"에게 2장의 카드를 나누었습니다.");
     }
 
-    public static void retain(Cards cards){
-        System.out.println(cards.retain());
+    public static void retain(Player player){
+        System.out.println(player.getName()+"카드: "+ player.getCards().retain());
     }
 }
