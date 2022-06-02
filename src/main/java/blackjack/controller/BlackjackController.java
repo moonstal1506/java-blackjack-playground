@@ -1,9 +1,6 @@
 package blackjack.controller;
 
-import blackjack.model.Dealer;
-import blackjack.model.Deck;
-import blackjack.model.Gamer;
-import blackjack.model.Player;
+import blackjack.model.*;
 import blackjack.view.InputView;
 import blackjack.view.OutputView;
 
@@ -21,6 +18,7 @@ public class BlackjackController {
         initCards();
         playerNeedMoreCard(gamer);
         dealerNeedMoreCard(dealer);
+        judge();
     }
 
     private void initCards() {
@@ -53,4 +51,10 @@ public class BlackjackController {
             needMoreCard(player);
         }
     }
+
+    private void judge(){
+        String result = Judgement.judge(gamer.getCards(), dealer.getCards());
+        OutputView.reportResult(result, gamer, dealer);
+    }
+
 }

@@ -1,6 +1,7 @@
 package blackjack.view;
 
 import blackjack.model.Cards;
+import blackjack.model.Dealer;
 import blackjack.model.Gamer;
 import blackjack.model.Player;
 
@@ -16,5 +17,16 @@ public class OutputView {
 
     public static void isUnder16(){
         System.out.println("딜러는 16이하라 한장의 카드를 더 받았습니다.");
+    }
+
+    public static void reportResult(String result, Gamer gamer, Dealer dealer){
+        reportSum(gamer);
+        reportSum(dealer);
+        System.out.println(result);
+    }
+
+    private static void reportSum(Player player){
+        System.out.println(player.getName()+"점수: "+ player.getCards().sumScore());
+
     }
 }
