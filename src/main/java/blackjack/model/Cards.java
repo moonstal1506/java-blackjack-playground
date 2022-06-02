@@ -3,6 +3,8 @@ package blackjack.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.util.stream.Collectors.joining;
+
 public class Cards {
 
     private final List<Card> cards;
@@ -25,5 +27,9 @@ public class Cards {
             total+=card.getScore();
         }
         return total;
+    }
+
+    public String retain() {
+        return cards.stream().map(card -> card.retain()).collect(joining(", "));
     }
 }
