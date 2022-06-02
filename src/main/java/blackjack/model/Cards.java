@@ -18,4 +18,12 @@ public class Cards {
     public List<Card> getCards() {
         return cards;
     }
+
+    public int sumScore(){
+        int total=0;
+        for(Card card : cards){
+            total+=card.getScore();
+        }
+        return total;
+    }
 }
