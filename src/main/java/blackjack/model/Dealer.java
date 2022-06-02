@@ -8,4 +8,8 @@ public class Dealer extends Player {
     public boolean needMoreCard(){
         return getScore() <= NEED_MORE_CARD_NUMBER;
     }
+
+    public String getNAME() {
+        return NAME;
+    }
 }
