@@ -15,4 +15,8 @@ public class Player {
     public Cards getCards() {
         return cards;
     }
+
+    public int getScore(){
+        return cards.sumScore();
+    }
 }
