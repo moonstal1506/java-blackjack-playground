@@ -1,6 +1,6 @@
 package blackjack.model;
 
-public class Player {
+public abstract class Player {
 
     private final Cards cards;
 
@@ -19,4 +19,6 @@ public class Player {
     public int getScore(){
         return cards.sumScore();
     }
+
+    public abstract String getName();
 }

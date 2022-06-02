@@ -9,7 +9,7 @@ public class Dealer extends Player {
         return getScore() <= NEED_MORE_CARD_NUMBER;
     }
 
-    public String getNAME() {
+    public String getName() {
         return NAME;
     }
 }

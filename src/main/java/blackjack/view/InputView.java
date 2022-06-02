@@ -9,7 +9,7 @@ public class InputView {
 
     private static final Scanner scanner = new Scanner(System.in);
 
-    public static Player inputPlayerName(){
+    public static Gamer inputPlayerName(){
         System.out.println("게임에 참여할 사람의 이름을 입력하세요.");
         return new Gamer(scanner.next());
     }
