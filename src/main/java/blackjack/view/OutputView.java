@@ -13,4 +13,8 @@ public class OutputView {
     public static void retain(Player player){
         System.out.println(player.getName()+"카드: "+ player.getCards().retain());
     }
+
+    public static void isUnder16(){
+        System.out.println("딜러는 16이하라 한장의 카드를 더 받았습니다.");
+    }
 }
